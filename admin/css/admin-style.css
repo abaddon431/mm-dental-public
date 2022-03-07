@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+body,
+button {
+    font-family: "Open Sans", sans-serif;
+    font-size:small;
+}
+html, body{
+    margin:0px;
+    height:100%;
+    background-color: rgb(245, 245, 245);
+}
+:root{
+  --offcanvas-width: 270px;
+  --topNavbarheight:56px;
+  /*colors*/
+  --primaryColor:#31c2b3;
+  --primaryShade:#1c6d65;
+  --primaryHigh:#5be6d8;
+}
+
+.sidebar-nav{
+    width: var(--offcanvas-width);
+}
+@media (min-width:992px){
+    .modal-backdrop::before{
+        display: none;
+    }
+    main{
+        margin-left: var(--offcanvas-width);
+    }
+    .sidebar-nav{
+        transform: none;
+        visibility: visible !important;
+        top:var(--topNavbarheight);
+        height: calc(100% - var(--topNavbarheight));
+        z-index: 1040;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .fc .fc-toolbar.fc-header-toolbar {
+        display: block;
+        text-align: center;
+    }
+
+    .fc-header-toolbar .fc-toolbar-chunk {
+        display: block;
+    }
+}
+#main-div{
+    background-color:transparent;
+    height:100%;
+}
+
+.custom-dropdown a{
+    color: black!important;
+}
+.nav-items{
+    color: rgb(29, 29, 29)!important;
+}
+/*dark end*/
+/* .sidebar-nav{
+    background-color: rgb(24, 24, 24);
+}
+
+.sidebar-link{
+    display:flex;
+    align-items: center;
+}
+.sidebar-link .right-icon{
+    display: inline-flex;
+    transition:all ease 0.2s;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+    transform: rotate(180deg);
+} */
+
+.custom-nav{
+    background-color: var(--primaryColor) !important;
+}
+.custom-nav-patient{
+    border-bottom: 1px solid grey;
+    padding-left: 0px;
+    padding-bottom: 2px;
+}
+.custom-nav-patient a{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:all ease 0.2s;
+}
+.custom-nav-patient a:hover{
+    color:var(--primaryColor);
+    cursor: pointer;
+}
+.custom-nav-patient .patient-nav:hover{
+    transition:all ease 0.2s;
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+.custom-nav-patient .patient-nav.active{
+    color:var(--primaryColor);
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+
+.custom-nav-existing{
+    margin-left:1em;
+    padding-bottom: 2px;
+}
+.custom-nav-existing a{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:all ease 0.2s;
+}
+.custom-nav-existing a:hover{
+    color:var(--primaryColor);
+    cursor: pointer;
+}
+.custom-nav-existing .existing-nav:hover{
+    transition:all ease 0.2s;
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+.custom-nav-existing .existing-nav.active{
+    color:var(--primaryColor);
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+.custom-nav-existing .req-existing-nav:hover{
+    transition:all ease 0.2s;
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+.custom-nav-existing .req-existing-nav.active{
+    color:var(--primaryColor);
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+/*-----------------------------------------------*/
+.custom-nav-proc{
+    border-bottom: 1px solid grey;
+    padding-left: 0px;
+    padding-bottom: 2px;
+}
+.custom-nav-proc a{
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition:all ease 0.2s;
+}
+.custom-nav-proc a:hover{
+    color:var(--primaryColor);
+    cursor: pointer;
+}
+.custom-nav-proc .proc-nav:hover{
+    transition:all ease 0.2s;
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+.custom-nav-proc .proc-nav.active{
+    color:var(--primaryColor);
+    box-shadow:  0 8px 0px -4px var(--primaryColor); 
+}
+
+/*----------------------------------------------*/
+.panel-user,.panel-user:hover{
+    color:white;
+    cursor: pointer;
+}
+.last-btn-grp{
+    height: 100px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    list-style-type: none;
+    padding-bottom:5.5em;
+}
+.dropdown-item:hover{
+    background-color: var(--primaryColor) !important;
+    color: white;
+    transition-duration: .2s;
+}
+.nav-items:hover{
+    background-color: var(--primaryColor) !important;
+    color: white!important;
+    margin-left: 10px;
+    transition:background-color 0.2s, margin-left 0.2s;
+    border-radius: 5px 0px 0px 5px;
+}
+.nav-items.active{
+    background-color: var(--primaryColor) !important;
+    color: white !important;
+    margin-left: 10px;
+    border-radius: 5px 0px 0px 5px;
+}
+.main-card{
+    color: white;
+    background-color: var(--primaryColor);
+    /* box-shadow: -4px 0px 0px 0px var(--primaryColor); */
+    border-radius: 0px;
+}
+#calendar a{
+    text-decoration: none;
+    color: #292b2c;
+}
+    
+.fc-button{
+    background-color: var(--primaryColor) !important;
+    border:none !important;
+}
+.fc-button:hover, .fc-button-active{
+    background-color: var(--primaryShade) !important;
+    transition: all ease 0.2s;
+    border:none !important;
+}
+
+.fc-highlight{
+    background-color: var(--primaryHigh) !important;
+}
+.fc-day-today .fc-daygrid-day-number{
+    background-color: var(--primaryColor);
+    color: white !important;
+}
+.reject-btn, .accept-btn{
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.705);
+    cursor: pointer;
+}
+.accept-btn:hover{
+    color:rgb(74, 255, 104);
+}
+.reject-btn:hover{
+    color:rgb(255, 68, 68);
+}
+
+.modal-header{
+    background-color: white;
+}
+.custom-modal-btn#insert,#ok-btn{
+    background-color: var(--primaryColor);
+    color: white;
+}
+.custom-modal-btn#insert:hover,#ok-btn:hover{
+    background-color:var(--primaryHigh);
+}
+.custom-modal-btn#close-btn:hover{
+    color:rgb(180, 49, 49);
+}
+.custom-modal-btn#insert{
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.first_name{
+    cursor: pointer;
+}
+.thead{
+    /* background-color: rgb(59, 59, 59);
+    color: white; */
+    color: rgb(117, 117, 117);
+}
+.table#patient-table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    padding: 10px;
+}
+.table#appointment-request-table{
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    padding: 10px;
+}
+.table#proc-table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+.table#branch-table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+.table#users-table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+.table#roles-table{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+.table#patient-history{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+.table#patient-schedule{
+    border-collapse:separate;
+    border-spacing:0 10px;
+    padding:5px;
+}
+.table#patient-treatment{
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    padding: 5px;
+}
+
+.table#patient-treatment>tbody>tr>td,
+.table#patient-treatment>tbody>tr{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+.table#patient-history>tbody>tr>td,
+.table#patient-history>tbody>tr{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+
+.table#patient-schedule>tbody>tr>td,
+.table#patient-schedule>tbody>tr{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+
+.table#patient-history>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+.table#patient-schedule>tbody>tr.sc-sched>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+.table#patient-schedule>tbody>tr.sc-noshow>:first-child{
+    box-shadow: -8px 0px 0px 0px red; 
+}
+.table#patient-schedule>tbody>tr.sc-done>:first-child{
+    box-shadow: -8px 0px 0px 0px green; 
+}
+.table#patient-treatment>tbody>tr.tr-treat>:first-child{
+    box-shadow: -8px 0px 0px 0px orange; 
+}
+.table#patient-treatment>tbody>tr.tr-monitor>:first-child{
+    box-shadow: -8px 0px 0px 0px red; 
+}
+
+.notif-dot{
+    height: 10px;
+    width: 10px;
+    background-color: rgba(255, 0, 0, 0.514);
+    border-radius: 50%;
+    display: inline-block;
+}
+.limit-select
+{
+    display: block;
+    padding: .375rem 2.25rem .375rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.limit-select-label
+{
+    background-color: var(--primaryColor);
+    color: rgb(255, 255, 255);
+}
+.input-group-text{
+    background-color: var(--primaryShade);
+    color: rgb(255, 255, 255);
+}
+
+.input-group-text.toggle-text{
+    background-color: transparent;
+    color: black;
+    height: 34px;
+    border: none;
+}
+.page-link{
+    color: var(--primaryShade);
+}
+.page-item.active .page-link{
+    background-color: var(--primaryColor);
+    z-index: 3;
+    color: #fff;
+    border-color: var(--primaryHigh);
+}
+.check-treatment{
+    color: green;
+    font-size:medium;
+}
+.check-schedule{
+    color: green;
+    padding-right: 5px;
+    font-size:medium;
+}
+.failed-schedule{
+    color: red;
+    font-size:medium;
+}
+.table#patient-table>tbody>tr>td,
+.table#patient-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#patient-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+
+.table#appointment-request-table>tbody>tr>td,
+.table#appointment-request-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#appointment-request-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px #31c2b3; 
+}
+
+/*---------------clinic-----------------------*/
+
+.table#proc-table>tbody>tr>td,
+.table#proc-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#proc-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+
+.table#branch-table>tbody>tr>td,
+.table#branch-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#branch-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+/*--------------------------------------------*/
+
+/*****************------User management------**********/
+.table#users-table>tbody>tr>td,
+.table#user-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#users-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+
+.table#roles-table>tbody>tr>td,
+.table#roles-table>tbody>tr{
+    background-color: white;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+}
+
+.table#roles-table>tbody>tr>:first-child{
+    box-shadow: -8px 0px 0px 0px var(--primaryColor); 
+}
+/*--------------------------------------------------*/
+#dental_chart>tbody>tr>td,
+#dental_chart>tbody>tr{
+    background-color: transparent;
+    padding: 15px;
+}
+.bi-pencil-fill, .bi-trash{
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.705);
+}
+
+#add-patient-btn,#search-patient-btn{
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 5px;
+}
+#add-patient-btn:hover{
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 5px;
+}
+#search-patient-field{
+    background-color: transparent;
+    border:transparent;
+}
+.patientid_handle{
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 5px;
+}
+.patientid_handleLhover{
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 5px;
+}
+#dental_chart{
+    background-color: rgba(0, 0, 0, 0.027);
+    padding-left: 10px;
+}
+
+[class*="dc-teeth-"]:hover{
+    cursor: pointer;
+}
+[class*="missing"]{
+    background-image:url('../css/tooth-chart/dental_chart_sprites_missing.png');
+}
+[class*="operated"]{
+    background-image: url('../css/tooth-chart/dental_chart_sprites_active.png');
+}
+[class*="grouped"]{
+    background-image: url('../css/tooth-chart/dental_chart_sprites_group.png');
+}
+.bi{
+    cursor: pointer;
+}
+.op-btn{
+    background-color: var(--primaryColor);
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+
+}
+.custom-dd-btn {
+    border: 1px solid #ced4da;
+}
+#patho-zone-dropdown li,
+#resto-zone-dropdown li{
+    padding: 2px 5px;
+}
+#patho-zone-dropdown li:hover,
+#resto-zone-dropdown li:hover{
+    background-color: var(--primaryColor);
+    color: white;
+}
+#patho-tooth-id-text,
+#resto-tooth-id-text{
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+.options input[type="radio"]{
+    visibility: hidden;
+}
+.options label{
+    padding: 10px;
+    cursor: pointer;
+    border: 5px #ced4da solid;
+    border-radius: 2px;
+}
+.options input[type="radio"]:checked + .monitor-label{
+    border: 5px red solid;
+    border-radius: 2px;
+    color:red;
+}
+
+.options input[type="radio"]:checked + .treat-label{
+    border: 5px orange solid;
+    color:orange;
+    border-radius: 2px;
+}
+
+.options input[type="radio"]:checked + .save-label{
+    border: 5px var(--primaryColor) solid;
+    color:var(--primaryColor);
+    border-radius: 2px;
+}
+.patient-edit-btn, .patient-remove-btn{
+    cursor: pointer;
+}
+.custom-nav-dd .bi-person-fill::before{
+    color: rgb(216, 216, 216);
+}
+.custom-nav-dd a{
+    color:white;
+}
+.custom-nav-dd a:hover{
+    color:rgb(218, 218, 218);
+}
+.custom-nav-dd a::after{
+    color:rgb(218, 218, 218);
+}
+.custom-nav-dd{
+    list-style-type: none;
+}
+#generate_report{
+    background-color: var(--primaryColor);
+    color: white;
+    border: none;
+    padding: 5px;
+}
+
+.table#patient-table tr, .table#appointment-request-table tr{
+border: 1px solid transparent;
+z-index:7;
+transition: all 0.2s ease-in-out;
+}
+.table#patient-table td .table#appointment-request-table td{
+text-align:center;
+padding: 20px;
+transition: all 0.2s ease-in-out;
+}
+.table#patient-table tr:hover, .table#appointment-request-table tr:hover{
+box-shadow: 0px 9px 4px -6px grey;
+}
+.theader{
+    pointer-events: none;
+}
+.table#patient-table tr:hover td, .table#appointment-request-table tr:hover td{
+border-bottom: 1px solid rgba(128, 128, 128, 0);
+}
+.table#appointment-request-table tr:hover td{
+cursor:default;
+}
+.error{
+    color:rgb(255, 93, 93);
+}
+
+.custom-file-upload {
+	border: 1px solid #bfbfbf;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+	border-radius: 5px;
+}
+.item-image{
+    border: 5px solid grey;
+    cursor: pointer;
+}
+.item-image:hover{
+    border: 5px solid var(--primaryColor);
+}
+.patient-image{
+    border: 5px solid grey;
+}
+.patient-image:hover{
+    border: 5px solid var(--primaryColor);
+}
+.fileheader{
+    padding-top: 10px;
+}
+.custom-file-upload-admin {
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+input[type="file"]
+{
+    display:none;
+}
+.spacer{
+    margin-top: 50px;
+}
+#group-select-one, #group-select-two, #group-select-done
+{
+    display:none;
+}
+.multi-toggle, #group-select-done
+{
+    padding: 10px;
+    border-radius: 2px;
+    background-color: var(--primaryColor);
+    border: 0;
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+.card-item .bi-x-circle-fill{
+    color: rgb(255, 74, 74);
+    font-size: 20px;
+}
+.card-item .close{
+    padding-left: 10em;
+}
+.patient-info-table th, .patient-info-table td
+{
+    padding-left: 15px;
+    
+    margin-bottom: 5px;
+    text-align: left;
+}
+.settings{
+    width: 50%;
+}
+ /* The switch - the box around the slider */
+ .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  } 
+/* 
+.main-content{
+    display: none;
+}
+.main-loader{
+    height:100vh;
+    width:100vw;
+    overflow:hidden;
+    background-color: rgba(0, 0, 0, 0.027);
+    position: absolute;
+}
+.main-loader>div{
+    height:100px;
+    width:100px;
+    border: 10px solid #45474b;
+    border-top-color: var(--primaryColor);
+    position:absolute;
+    margin: auto;
+    top: 0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius: 50%;
+    animation:spin .5s infinite linear;
+}
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+} */
+/* 
+#dental_chart{
+    table-layout: fixed;
+    word-wrap: break-word;
+} */
+/*modal css*/

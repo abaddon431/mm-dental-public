@@ -1,0 +1,24 @@
+.call-to-action{
+    padding: 10% 0;
+    text-align: center;
+
+    h2{
+        color: #ffff;
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 2em;
+    }
+
+    @include break(768px){
+        padding: 0;
+
+        h2{
+            font-size: 4em;
+        }
+
+        a{
+            margin: 10px 0;
+        }
+    }
+
+}

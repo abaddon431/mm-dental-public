@@ -1,0 +1,69 @@
+
+.nav-item{
+    a {
+        font-family: $main-font;
+    }
+}
+.hero-section{
+    padding: 20% 0;
+}
+.hero-text{
+    color: #ffff;
+
+    .header{
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 2em;
+
+    }
+
+    .sub-header{
+        font-weight: 400;
+        font-size: 1em;
+    }
+    a{
+        margin: 10px 0;
+    }
+
+}
+.main-header{
+    background-image: $main-gradient,
+    url(images/clinic-images/main-background-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+
+    @include break(768px){
+        background-image: $main-gradient,
+        url(images/clinic-images/main-background-ipad.jpg);
+
+        .header{
+            font-size: 3em;
+        }
+
+        .sub-header{
+            font-size: 1.1em;
+        }
+
+        
+    }
+
+    @include break(1200px){
+        background-image: $main-gradient,
+        url(images/clinic-images/main-background.jpg);
+
+        .hero-section{
+            padding: 5% 0;
+        }
+
+        .header{
+            font-size: 3.25em;
+            width: 60%;
+        }
+        .sub-header{
+            font-size: 1.5em;
+        }
+        .cta-btn{
+            font-size: 1.1em;
+        }
+    }
+}

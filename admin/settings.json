@@ -1,0 +1,7 @@
+{
+    "sms": {
+        "apicode": "YOUR_APICODE HERE",
+        "password": "YOUR_PASSWORD HERE"
+    },
+    "theme": "default"
+}

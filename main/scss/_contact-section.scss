@@ -1,0 +1,72 @@
+.contact-us{
+    padding: 10% 0;
+    color: #ffff;
+    text-align: center;
+    
+    h2{
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 1.75em;
+    }
+
+    p{
+        font-weight: 400;
+        font-size: .90em;
+        line-height: 1.15;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    em{
+        font-weight: 600;
+    }
+
+    .map-container{
+        width: 100%;
+        height: 100%;
+        margin: 20px 0;
+    }
+
+}
+
+.socials-container{
+    margin: 10px;
+
+    h3{
+        font-weight: 400;
+        font-size: .90em;
+        width: 80%;
+        margin: 0 auto;
+    }
+    h4{
+        font-size: 1em;
+        font-family: $main-font;
+    }
+    img{
+        width: 2em;
+        margin: 5px 0;
+    }
+}
+
+.contact-us{
+    @include break(768px){
+
+        padding: 4% 0;
+
+        h2 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        h3{
+            font-size: 1.2em;
+        }
+    }
+
+    @include break(1280px){
+        h2 {
+            font-size: 2.25em;
+        }
+    }
+}

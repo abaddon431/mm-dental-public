@@ -1,0 +1,26 @@
+.container-fluid{
+    padding: 4% 5%;
+
+    @include break(768px){
+        padding: 4% 10%;
+    }
+
+    @include break(1280px){
+        padding: 4% 15%;
+    }
+}
+
+/* BUTTONS */
+.btn{
+    display: inline-block;
+    color: #ffff;
+    font-family: $main-font;
+}
+.btn-primary{
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+.btn-outline-primary{
+    border-color: $secondary-color;
+    color: $secondary-color;
+}

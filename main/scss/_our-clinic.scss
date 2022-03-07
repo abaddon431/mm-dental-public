@@ -1,0 +1,67 @@
+
+.clinic-text{
+    color: #ffff;
+    h2{
+        font-family: $main-font;
+        font-weight: 600;
+        font-size: 1.75em;
+        width: 70%;
+    }
+    p{
+        font-weight: 400;
+        font-size: .90em;
+        line-height: 1.15;
+        width: 70%;
+    }
+    em{
+        font-style: normal;
+        font-weight: 600;
+    }
+}
+
+.clinic-carousel{
+    margin: 50px 0;
+    img{
+        width: 100%;
+        border-radius: 10px;
+        height: 450px;
+        object-fit: cover;
+    }
+    .carousel-item{
+        border-radius: 10px;
+        
+    }
+}
+
+.carousel-cta-container{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.our-clinic{
+    padding: 10% 0;
+
+    @include break(768px){
+        padding: 8% 0;
+
+        h2{
+            font-size: 2em;
+            width: 75%;
+        }
+        p{
+            font-size: 1.1em;
+        }
+
+    }
+
+    @include break(1200px){
+        padding: 5% 0;
+
+        h2{
+            font-size: 2.25em;
+            width: 70%;
+        }
+
+    }
+    
+}

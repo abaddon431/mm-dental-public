@@ -1,0 +1,6 @@
+/* MEDIA QUERIES */
+@mixin break($width) {
+    @media screen and (min-width: $width)  {
+        @content
+    }
+}

@@ -1,0 +1,21 @@
+.main-footer{
+    text-align: center;
+    padding: 7% 0;
+    h4{
+        font-family: $main-font;
+        font-size: .7em;
+    }
+    
+    em{
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    @include break(768px){
+        padding: 3% 0;
+
+        h4{
+            font-size: 1em;
+        }
+    }
+}

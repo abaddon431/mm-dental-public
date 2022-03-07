@@ -1,0 +1,51 @@
+.container-fluid{
+    padding: 4% 5%;
+
+    @include break(768px){
+        padding: 4% 10%;
+    }
+
+    @include break(1200px){
+        padding: 4% 15%;
+    }
+}
+
+/* grid */
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+/* SECTION BACKGROUND COLORS */
+.main-colored-bg{
+    background-color: $main-color;
+}
+.colored-bg{
+    background-color: $third-color;
+}
+.white-bg{
+    background-color: #ffff;
+}
+/* BUTTONS */
+.btn{
+    display: inline-block;
+    color: #ffff;
+    font-family: $main-font;
+    padding: 8px 25px;
+}
+.btn-primary{
+    background-color: $secondary-color;
+    border-color: $secondary-color;
+}
+/* HR TAG STYLING */
+.main-line{
+    opacity: 100;
+    width: 30%;
+    margin: 10px 0;
+}
+.light{
+    color: #ffff;
+}
+
